@@ -14,3 +14,10 @@ function buildTable() {
     }
   }
 }
+
+function removeTable() {
+  let table = document.querySelector('.build');
+  while (table.firstChild) {
+      table.removeChild(table.firstChild);
+  }
+}
