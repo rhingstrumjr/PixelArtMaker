@@ -12,9 +12,9 @@
     <div class="grid-options">
       <form action="">
         Height (1-100):<br>
-        <input type="number" name="height" value="10" min="1" max="100"><br>
+        <input type="number" id="height" name="height" value="10" min="1" max="100"><br>
         Width (1-100):<br>
-        <input type="number" name="width" value="10" min="1" max="100"><br><br>
+        <input type="number" id ="width" name="width" value="10" min="1" max="100"><br><br>
         Color:<br>
         <input type="color" name="color"><br><br>
         <input type="submit" value="Submit">
@@ -22,11 +22,13 @@
       </form>
     </div>
     <div class="grid-container">
-      <table>
-        
+      <table >
+        <tbody class="build">
+          
+        </tbody>
       </table>
     </div>
 
-
+    <script src="script.js"></script>
   </body>
 </html>
