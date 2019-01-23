@@ -2,7 +2,15 @@
 function heightAndWidth() {
   let x = document.getElementById('width').value;
   let y = document.getElementById('height').value;
-  let element = document.querySelector('.build');
-
-  console.log(x, y, element);
+  const element = document.querySelector('.build');
+  for (i = 1; i <= y; i++) {
+    let row = document.createElement("TR");
+    element.appendChild(row);
+    for (c = 1; c <= x; c ++) {
+      let column = document.createElement("TD")
+      let placeholder = document.createTextNode(c)
+      column.appendChild(placeholder);
+      element.lastChild.appendChild(column);
+    }
+  }
 }
