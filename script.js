@@ -24,10 +24,18 @@ function removeTable() {
 function colorCells() {
   // Get color from color picker
   let color = document.getElementById("colorChoice").value;
+  // Get element the mouse is pointing to
   let cw = event.clientX, ch = event.clientY,
       elt = document.elementFromPoint(cw, ch);
   elt.style.backgroundColor = color;
 }
 
-var el = document.querySelector('.build');
-el.addEventListener("click", colorCells);
+// Adds event listener to the table so color can change
+const eltable = document.querySelector('.build');
+eltable.addEventListener("click", colorCells);
+
+const elhorw = document.querySelectorAll('.tprop');
+elhorw.addEventListener("valueChange", funtion() {
+  removeTable();
+  buildTable();
+});
