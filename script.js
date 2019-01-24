@@ -8,8 +8,6 @@ function buildTable() {
     element.appendChild(row);
     for (c = 1; c <= x; c ++) {
       const column = document.createElement("TD")
-      let placeholder = document.createTextNode(c)
-      column.appendChild(placeholder);
       element.lastChild.appendChild(column);
     }
   }
