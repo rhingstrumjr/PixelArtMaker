@@ -21,3 +21,15 @@ function removeTable() {
       table.removeChild(table.firstChild);
   }
 }
+
+// Color the cells of the table
+function colorCells() {
+  // Get color from color picker
+  let color = document.getElementById("colorChoice").value;
+  let cw = event.clientX, ch = event.clientY,
+      elt = document.elementFromPoint(cw, ch);
+  elt.style.backgroundColor = color;
+}
+
+var el = document.querySelector('.build');
+el.addEventListener("click", colorCells);
