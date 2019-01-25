@@ -12,3 +12,11 @@ div {
 .tprop {
   float: right;
 }
+
+input[type=submit] {
+  margin-left: 17px;
+}
+
+.grid-container {
+  margin-top: 10px;
+}

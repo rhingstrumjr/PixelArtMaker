@@ -10,7 +10,7 @@
       <h1>Pixel Art Maker</h1>
     </div>
     <div class="grid-options">
-      <form action="">
+      <form action="" onsubmit = "removeTable(), buildTable(); return false">
         Height (1-25):
         <input type="number" id="height" class = "tprop" name="height"
                 value="10" min="1" max="25"><br><br>
@@ -20,8 +20,7 @@
         Color:
         <input type="color" id = "colorChoice" class = "tprop" name="color"
                 value="#63D1F4"><br><br>
-        <input type="submit" value="Submit">
-        <input type="reset">
+        <input type="submit" value="Make a blank table!"><br>
       </form>
     </div>
     <div class="grid-container">
