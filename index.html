@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Monoton">
     <title>Pixel Art Maker</title>
   </head>
   <body onload=buildTable()>
@@ -10,7 +12,7 @@
       <h1>Pixel Art Maker</h1>
     </div>
     <div class="grid-options">
-      <form action="" onsubmit = "removeTable(), buildTable(); return false">
+      <form onsubmit = "removeTable(), buildTable(); return false">
         Height (1-25):
         <input type="number" id="height" class = "tprop" name="height"
                 value="10" min="1" max="25"><br><br>
@@ -18,7 +20,8 @@
         <input type="number" id ="width" class = "tprop" name="width"
                 value="10" min="1" max="25"><br><br>
         Color:
-        <input type="color" id = "colorChoice" class = "tprop" name="color"
+        <script src="jscolor.js"></script>
+        <input id = "colorChoice" class = "jscolor" name="color"
                 value="#63D1F4"><br><br>
         <input type="submit" value="Make a blank table!"><br>
       </form>
@@ -32,5 +35,6 @@
     </div>
 
     <script src="script.js"></script>
+
   </body>
 </html>
