@@ -34,8 +34,10 @@ function colorCells() {
 const eltable = document.querySelector('.build');
 eltable.addEventListener("click", colorCells);
 
-const elhorw = document.querySelectorAll('.tprop');
-elhorw.addEventListener("valueChange", funtion() {
-  removeTable();
-  buildTable();
-});
+const elheight = document.getElementById('height');
+elheight.addEventListener('change', removeTable);
+elheight.addEventListener('change', buildTable);
+
+const elwidth = document.getElementById('width');
+elwidth.addEventListener('change', removeTable);
+elwidth.addEventListener('change', buildTable);
