@@ -4,11 +4,7 @@ td {
   width: 15px;
 }
 
-.grid-container {
+div {
   margin: 0 auto;
   width: fit-content;
-}
-
-h1 {
-  margin: 0 auto;
 }
