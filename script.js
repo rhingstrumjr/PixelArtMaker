@@ -1,13 +1,14 @@
 // Constructs the pixel table.
 function buildTable() {
-  const x = document.getElementById('width').value;
-  const y = document.getElementById('height').value;
+  const width = document.getElementById('width').value;
+  const height = document.getElementById('height').value;
   const element = document.querySelector('.build');
-  for (let i = 1; i <= y; i++) {
+  for (let i = 1; i <= height; i++) {
     const row = document.createElement("TR");
     element.appendChild(row);
-    for (let c = 1; c <= x; c ++) {
+    for (let c = 1; c <= width; c ++) {
       const column = document.createElement("TD");
+      // column.className = "cell";
       element.lastChild.appendChild(column);
     }
   }
@@ -28,10 +29,12 @@ function colorCells() {
   // Get color from color picker
   let color = document.getElementById("colorChoice").value;
   // Get element the mouse is pointing to
-  let cw = event.clientX, ch = event.clientY,
-      elt = document.elementFromPoint(cw, ch);
-  // Set cell to the color
-  elt.style.backgroundColor = color;
+  let clickWidthLocation = event.clientX, clickHeightLocation = event.clientY,
+      elt = document.elementFromPoint(clickWidthLocation, clickHeightLocation);
+  // Set cell to the color as long as only the cell is clicked
+  if (!elt.hasChildNodes()){
+    elt.style.backgroundColor = color;
+  }
 }
 
 
